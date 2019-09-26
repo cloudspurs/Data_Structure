@@ -24,7 +24,10 @@ int main() {
 		number[j] = 0;
 	}
 
-	sscanf(number, "%d", &output);
+	if(strlen(number) < 1)
+		output = 0;
+	else
+		sscanf(number, "%d", &output);
 
 //	printf("\n%d\n", output);
 	textcolor(BLUE);

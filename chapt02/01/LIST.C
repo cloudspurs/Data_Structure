@@ -2,7 +2,7 @@
 #include <alloc.h>
 #include "LIST.H"
 
-int Init(List *list, int size) {
+int Init(List* list, int size) {
 	list->elem = (type*)malloc(size * sizeof(type));
 	if(list->elem == NULL)
 		return 0;
@@ -11,7 +11,7 @@ int Init(List *list, int size) {
 	return 1;
 }
 
-void Destroy(List *list) {
+void Destroy(List* list) {
 	free(list->elem);
 	list->elem = NULL;
 	list->size = 0;
@@ -22,7 +22,7 @@ int Full(List list) {
 	return list.len == list.size;
 }
 
-int Insert(List *list, type value, int index) {
+int Insert(List* list, type value, int index) {
 	int i;
 	if(index > list->len || Full(*list))
 		return 0;
