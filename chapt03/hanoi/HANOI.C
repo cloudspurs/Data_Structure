@@ -34,6 +34,7 @@ void move(int x, int y)
     py = 480 - plate_height[x - 1] * 16;
     eraseplate(px, py, wide);
     setfillstyle(SOLID_FILL, x - 1 + 11);
+    // draw pillar blocked by a plate
     bar(100 + 200 * (x - 1) - 5, py, 100 + 200 * (x - 1) + 5, py + 16 - 1);
 
     hole[y - 1][plate_height[y - 1]] = hole[x - 1][plate_height[x - 1] - 1];
@@ -106,6 +107,7 @@ void main()
 
     for (i = m; i >= 1; i--)
         hole[0][m - i] = i;
+
     plate_height[0] = m;
     plate_height[1] = plate_height[2] = 0;
 
@@ -114,6 +116,8 @@ void main()
 
     registerbgidriver(EGAVGA_driver);
     initgraph(&gdriver, &gmode, "");
+
+    // draw pillar/column
 
     for (i = 0; i < 3; i++) {
         setfillstyle(SOLID_FILL, 11 + i);
