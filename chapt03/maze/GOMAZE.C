@@ -59,8 +59,7 @@ void go(int maze[M][N], int x0, int y0, int xx, int yy)
                     if (temp == 'y') {
                         v++;
                         break;
-                    }
-                    else
+                    } else
                         return;
                 }
             } else if (x1 > 0 && x1 < N - 1 && y1 > 0 && y1 < M - 1 && !maze[y1][x1]) {
