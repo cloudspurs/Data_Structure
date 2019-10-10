@@ -107,7 +107,7 @@ int Evaluate(char* exp, float* result)
                 Pop(&s2, &W3);
                 break;
             case '=':
-                while (s2.elem[s2.top].word.op != '(') {
+                while (s2.elem[s2.top].word.op != '(') {  // !s2.empty()
                     if (!Pop(&s1, &W2) || !Pop(&s1, &W1) || !Pop(&s2, &W3)) {
                         DestroySqstack(&s1);
                         DestroySqstack(&s2);
