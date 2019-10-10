@@ -59,3 +59,4 @@ void drawpos(int x, int y)
     setfillstyle(SOLID_FILL, RED);
     fillellipse(x + 6, y + 6, 5, 5);
 }
+
