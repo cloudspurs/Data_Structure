@@ -4,6 +4,7 @@ typedef struct stack_node {
 	int size;
 } Stack;
 
+
 int Init(Stack* s, int n);
 void Destroy(Stack* s);
 int Empty(Stack s);
