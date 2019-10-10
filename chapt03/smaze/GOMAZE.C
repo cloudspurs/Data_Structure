@@ -22,7 +22,7 @@ void go1(int maze[M][N], int x, int y, int xx, int yy)
     maze[y][x] = 2;
     
     while (!IsSqqueueEmpty(q)) {
-		DeSqqueue(&q, &e);
+        DeSqqueue(&q, &e);
         x1 = e.x;
         y1 = e.y;
 

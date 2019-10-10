@@ -1,8 +1,8 @@
- #include <stdio.h>
+#include <stdio.h>
 #include <conio.h>
 #include "stack.h"
 
-int main() {
+void main() {
 	int i;
 	char temp[100];
 	Stack s;
@@ -32,5 +32,5 @@ int main() {
 
 	//Print(s);
 
-	return 0;
+	getch();
 }
